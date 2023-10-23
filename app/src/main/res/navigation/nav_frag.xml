@@ -1,0 +1,108 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_frag"
+    app:startDestination="@id/pantallaPrincipalFrag">
+
+    <fragment
+        android:id="@+id/pantallaPrincipalFrag"
+        android:name="mx.itesm.appreto2.View.pantallaPrincipalFrag"
+        android:label="fragment_pantalla_principal"
+        tools:layout="@layout/fragment_pantalla_principal" >
+        <action
+            android:id="@+id/action_pantallaPrincipalFrag_to_encargadoFrag"
+            app:destination="@id/encargadoFrag" />
+        <action
+            android:id="@+id/action_pantallaPrincipalFrag_to_usuarioFrag"
+            app:destination="@id/usuarioFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/usuarioFrag"
+        android:name="mx.itesm.appreto2.View.UsuarioFrag"
+        android:label="fragment_usuario"
+        tools:layout="@layout/fragment_usuario" >
+        <action
+            android:id="@+id/action_usuarioFrag_to_home3"
+            app:destination="@id/home3" />
+        <action
+            android:id="@+id/action_usuarioFrag_to_registroUsuario"
+            app:destination="@id/registroUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/encargadoFrag"
+        android:name="mx.itesm.appreto2.View.EncargadoFrag"
+        android:label="fragment_encargado"
+        tools:layout="@layout/fragment_encargado" >
+        <action
+            android:id="@+id/action_EncargadoFrag_to_encargadoHome"
+            app:destination="@id/encargadoHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/encargadoHome"
+        android:name="mx.itesm.appreto2.View.encargadoHome"
+        tools:layout="@layout/fragment_encargado_home" >
+        <action
+            android:id="@+id/action_encargadoHome_to_encargadoInicio"
+            app:destination="@id/encargadoInicio" />
+
+        <!-- Aquí es donde se agrega la acción -->
+        <action
+            android:id="@+id/action_encargadoHome_to_pedidos"
+            app:destination="@id/pedidos" />
+        <action
+            android:id="@+id/action_encargadoHome_to_encargadoCamera"
+            app:destination="@id/encargadoCamera" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/home3"
+        android:name="mx.itesm.appreto2.View.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home3_to_registroUsuario"
+            app:destination="@id/registroUsuario" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroUsuario"
+        android:name="mx.itesm.appreto2.View.RegistroUsuario"
+        android:label="RegistroUsuario" />
+    <fragment
+        android:id="@+id/encargadoInicio"
+        android:name="mx.itesm.appreto2.View.encargadoInicio"
+        android:label="fragment_encargado_inicio"
+        tools:layout="@layout/fragment_encargado_inicio" >
+
+        <!-- Aquí es donde se agrega la acción -->
+        <action
+            android:id="@+id/action_encargadoInicio_to_pedidos"
+            app:destination="@id/pedidos" />
+
+    </fragment>
+
+    <!-- Aquí es donde se agrega el argumento -->
+    <fragment
+        android:id="@+id/pedidos"
+        android:name="mx.itesm.appreto2.View.pedidos"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos">
+
+        <argument
+            android:name="selectedUser"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_pedidos_to_encargadoInicio"
+            app:destination="@id/encargadoInicio" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/encargadoCamera"
+        android:name="mx.itesm.appreto2.View.encargadoCamera"
+        android:label="fragment_encargado_camera"
+        tools:layout="@layout/fragment_encargado_camera" >
+        <action
+            android:id="@+id/action_encargadoCamera_to_pedidos"
+            app:destination="@id/pedidos" />
+    </fragment>
+
+</navigation>

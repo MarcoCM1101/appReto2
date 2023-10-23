@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Inicio"
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Anuncios"
+        android:id="@+id/announcement"
+        android:icon="@drawable/baseline_announcement_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Mapa"
+        android:id="@+id/map"
+        android:icon="@drawable/baseline_map_24"/>
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Código QR"
+        android:id="@+id/qr"
+        android:icon="@drawable/baseline_qr_code_24"/>
+</menu>

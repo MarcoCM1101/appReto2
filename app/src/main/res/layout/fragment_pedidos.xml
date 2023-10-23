@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout13"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.pedidos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/OneUserList"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:text="VENTA $13"
+            android:textColor="#9d4edd" />
+
+        <RadioButton
+            android:id="@+id/rbDonativo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:text="DONATIVO"
+            android:textColor="#9d4edd" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9d4edd"
+        android:orientation="horizontal">
+
+        <!-- Aquí es donde se cambió el RadioButton por un CheckBox -->
+        <CheckBox
+            android:id="@+id/rbComidaExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:text="¿Lleva comida para alguien más?"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/Buscador"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+    <ListView
+        android:id="@+id/SecondUserList"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:divider="#FFFFFF"
+        android:dividerHeight="3dp" />
+
+    <Button
+        android:id="@+id/btnusuarioComedor"
+        android:layout_width="212dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="28dp"
+        android:text="PASAR LISTA" />
+
+    <!-- Aquí es donde se agrega el FrameLayout -->
+
+</LinearLayout>
